@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="300.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Model">
+   <children>
+      <GridPane layoutY="79.0" prefHeight="321.0" prefWidth="300.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="AC" mnemonicParsing="false" onAction="#clear_klik" prefHeight="65.0" prefWidth="75.0" styleClass="digit" stylesheets="@application.css" text="AC" />
+            <Button fx:id="plusMinus" mnemonicParsing="false" onAction="#znakMinusPlus" prefHeight="65.0" prefWidth="108.0" styleClass="digit" stylesheets="@application.css" text="+/-" GridPane.columnIndex="1" />
+            <Button fx:id="procent" mnemonicParsing="false" onAction="#procenty" prefHeight="65.0" prefWidth="111.0" styleClass="digit" stylesheets="@application.css" text="\%" GridPane.columnIndex="2" />
+            <Button fx:id="dzielenie" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="75.0" prefWidth="106.0" styleClass="operator" stylesheets="@application.css" text="/" GridPane.columnIndex="3" />
+            <Button fx:id="seven" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="109.0" prefWidth="155.0" styleClass="digit" text="7" GridPane.rowIndex="1" />
+            <Button fx:id="eight" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="152.0" prefWidth="166.0" styleClass="digit" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="nine" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="140.0" prefWidth="206.0" styleClass="digit" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="mnozenie" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="186.0" prefWidth="243.0" styleClass="operator" stylesheets="@application.css" text="*" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button fx:id="four" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="123.0" prefWidth="165.0" styleClass="digit" text="4" GridPane.rowIndex="2" />
+            <Button fx:id="five" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="227.0" prefWidth="326.0" styleClass="digit" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="six" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="108.0" prefWidth="181.0" styleClass="digit" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button fx:id="odejmowanie" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="130.0" prefWidth="184.0" styleClass="operator" stylesheets="@application.css" text="-" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Button fx:id="one" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="153.0" prefWidth="247.0" styleClass="digit" text="1" GridPane.rowIndex="3" />
+            <Button fx:id="two" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="234.0" styleClass="digit" stylesheets="@application.css" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="three" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="101.0" prefWidth="166.0" styleClass="digit" stylesheets="@application.css" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button fx:id="dodawanie" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="161.0" prefWidth="207.0" styleClass="operator" stylesheets="@application.css" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Button fx:id="zero" minWidth="150.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="113.0" styleClass="digit" text="0" GridPane.rowIndex="4" />
+            <Button fx:id="przecinek" mnemonicParsing="false" onAction="#przecinek_klik" prefHeight="195.0" prefWidth="180.0" styleClass="digit" text="," GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Button fx:id="rownosci" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="235.0" prefWidth="303.0" styleClass="operator" stylesheets="@application.css" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+      <Label fx:id="wyswietlacz" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutY="-6.0" prefHeight="87.0" prefWidth="300.0" style="-fx-background-color: black;" stylesheets="@application.css" textFill="#f7e005">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font></Label>
+      <Pane layoutX="300.0" prefHeight="35.0" prefWidth="200.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-5.0" layoutY="-6.0" prefHeight="46.0" prefWidth="210.0" text="History" textOverrun="CENTER_ELLIPSIS" />
+         </children>
+      </Pane>
+      <Label fx:id="lblHistory" layoutX="300.0" layoutY="39.0" prefHeight="361.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>

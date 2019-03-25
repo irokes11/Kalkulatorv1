@@ -1,0 +1,61 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+
+.window {
+	-fx-background-color:aqua;
+}
+
+.digit {
+	
+	-fx-font-size:150.0%;
+	-fx-background-color: lightgray;
+	-fx-border-color:grey;
+	-fx-background-radius:0.0 ;
+	
+}
+
+.digit:pressed {
+	-fx-font-size: 300.0%;
+}
+
+.digit:hover {
+	-fx-background-color:lightgreen;
+}
+
+.operator {
+	-fx-font-size:150.0%;
+	-fx-background-color: orange;
+	-fx-border-color:grey;
+}
+
+.operator:pressed {
+	
+	-fx-font-size: 300.0%;
+}
+.operator:hover{
+	
+	-fx-background-color:lightblue;
+}
+
+operator2 {
+	-fx-font-size:150.0%;
+	-fx-background-color: lightgreen;
+	-fx-border-color:grey;
+}
+
+.operator2:pressed {
+	
+	-fx-font-size: 300.0%;
+}
+.operator2:hover{
+	
+	-fx-background-color:lightblue;
+}
+.result {
+	
+	-fx-text-fill: white;
+	-fx-background-color:darkgrey;
+	-fx-font-size:250.0%;
+	-fx-border-color:grey;
+	-fx-font-weight: 400;
+}
